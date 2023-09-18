@@ -4,7 +4,7 @@ const Link = ({route}) => {
     console.log(route)
     return (
         <div>
-            <ol className=''>
+            <ol className='hover:bg-red-700 p-4 rounded-md'>
             <li><a href={route.path}>{route.name}</a></li>
             </ol>
         </div>

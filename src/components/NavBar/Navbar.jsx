@@ -14,13 +14,15 @@ const Navbar = () => {
     ];
 
     return (
-        <div>
+        <div className="bg-red-500 text-white p-4">
             <div className="text-2xl md:hidden" onClick={()=> setIcon(!icon)}>
                 {
                     icon === true ? <AiOutlineClose></AiOutlineClose> : <AiOutlineMenu></AiOutlineMenu>
                 }
             </div>
-            <div className="md:flex gap-10">
+            <div className={`md:flex duration-1000 gap-10 absolute
+            ${icon? 'top-12' : '-top-80'}
+            bg-red-500 rounded-xl md:static md:text-2xl`}>
                 {
                     routes.map(route => <Link key={route.id} route={route}></Link>)
                 }
